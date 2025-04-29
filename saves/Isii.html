@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San_Valentin</title>
+    <style>
+        body {
+            background-image: url(https://i.postimg.cc/d3ptpCXQ/wallpaperflare-com-wallpaper.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: white;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+            
+        }
+
+        .botones {
+
+            gap: 20px;
+        }
+
+        .boton {
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            border: 3px solid pink;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.6);
+            ;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .boton:hover {
+            background: pink;
+            color: black;
+        }
+
+        .new-content {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .images img {
+            width: 200px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="San_Valentin">
+        <h1>Señorita ¿Me daría el placer de salir con usted, para San Valentín?</h1>
+        <div class="botones">
+            <button class="boton" onclick="mostrarNuevoContenido()">Sí</button>
+            <button class="boton" id="botonNo">No</button>
+        </div>
+    </div>
+
+    <div id="nuevoContenido" class="new-content">
+        <h1>Sabía que dirias que si!!!!!! <3 </h1>
+    </div>
+    <script>
+
+        const botonNo = document.getElementById("botonNo");
+
+        botonNo.addEventListener("mouseover", function () {
+            const anchoVentana = window.innerWidth;
+            const altoVentana = window.innerHeight;
+
+            const nuevaX = Math.random() * (anchoVentana - 100);
+            const nuevaY = Math.random() * (altoVentana - 100);
+
+            botonNo.style.position = "absolute";
+            botonNo.style.left = nuevaX + "px";
+            botonNo.style.top = nuevaY + "px";
+        });
+
+        function mostrarNuevoContenido() {
+            document.getElementById("San_Valentin").style.display = "none";
+            document.getElementById("nuevoContenido").style.display = "flex";
+            colocarImagenesAletorias();
+        }
+
+
+        function mostrarNuevoContenido() {
+            document.getElementById("San_Valentin").style.display = "none";
+            document.getElementById("nuevoContenido").style.display = "flex";
+
+        }
+
+    </script>
+</body>
+
+</html>
